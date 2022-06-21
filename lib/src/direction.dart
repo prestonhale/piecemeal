@@ -172,4 +172,28 @@ class Direction extends VecBase implements Vec {
 
     throw "unreachable";
   }
+  
+  Vec get adjustmentVec{
+    switch (this) {
+      case n:
+        return Vec(0, -1);
+      case ne:
+        return Vec(1, -1);
+      case e:
+        return Vec(1, 0);
+      case se:
+        return Vec(1, 1);
+      case s:
+        return Vec(0, 1);
+      case sw:
+        return Vec(-1, 1);
+      case w:
+        return Vec(-1, 0);
+      case nw:
+        return Vec(-1, -1);
+    }
+
+    throw "unreachable";
+  }
+
 }
